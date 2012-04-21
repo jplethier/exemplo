@@ -1,6 +1,6 @@
 class CreateAutoria < ActiveRecord::Migration
   def change
-    create_table :autoria do |t|
+    create_table :autorias do |t|
       t.integer :autor_id
       t.integer :publicacao_id
 

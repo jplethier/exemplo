@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421204036) do
+ActiveRecord::Schema.define(:version => 20120421204421) do
 
   create_table "artigos", :force => true do |t|
     t.integer  "autoria_id"
@@ -20,18 +20,19 @@ ActiveRecord::Schema.define(:version => 20120421204036) do
     t.datetime "updated_at"
   end
 
-  create_table "autoria", :force => true do |t|
-    t.integer  "autor_id"
-    t.integer  "publicacao_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "autors", :force => true do |t|
+  create_table "autores", :force => true do |t|
     t.integer  "autoria_id"
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "autorias", :force => true do |t|
+    t.integer  "autor_id"
+    t.integer  "publicacao_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "publicacao_type"
   end
 
   create_table "livros", :force => true do |t|
